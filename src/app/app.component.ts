@@ -1,10 +1,22 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {enableAkitaProdMode} from '@datorama/akita';
+import {AuthService} from '@core/services/auth/auth.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'contact-book';
+export class AppComponent implements OnInit {
+
+  constructor(
+    private authService: AuthService,
+  ) {
+    this.authService.checkAuthStatus();
+  }
+
+
+  ngOnInit(): void {
+    enableAkitaProdMode();
+  }
 }

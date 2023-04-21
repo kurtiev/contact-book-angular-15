@@ -1,0 +1,25 @@
+<mat-card>
+  <form class="form" novalidate (ngSubmit)="login(usernameInput.value, passInput.value)" #form="ngForm">
+    <mat-form-field>
+      <mat-label>Username</mat-label>
+      <input matInput [formControl]="email" required #usernameInput>
+      <mat-error *ngIf="email.invalid && form.submitted">
+        Username is required
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input matInput type="password" [formControl]="password" required #passInput>
+      <mat-error *ngIf="password.invalid && form.submitted">
+        Password is required
+      </mat-error>
+    </mat-form-field>
+
+
+    <div>
+      <button mat-raised-button color="primary" type="submit">Sign In</button>
+    </div>
+  </form>
+
+</mat-card>
