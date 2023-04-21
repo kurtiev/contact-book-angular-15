@@ -1,4 +1,7 @@
 # ContactBook
+<img width="1510" alt="preview" src="https://user-images.githubusercontent.com/15800725/233656135-5bd5d3d5-a7da-4a72-acef-7c2ccd15f1d4.png">
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
 
